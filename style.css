@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #191919;
+    background: #b8b8b8;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* configurar quebra de palavras pensando em telas menores */
+}
+
+h1, h2{
+    font-weight: 900;
+    color: #000;
+
+}
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background: #b8b8b8;
+}
+
+.conteiner{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto; 
+    padding: 0 15px;
+    animation: surgir 1s;
+    animation-timeline: view();
+    animation-range: cover 10% cover 70%;
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+section.modulo h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align:  center;
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: #b1b1b1;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: #b8b8b8;
+    text-align: center;
+    font-size: 80px;
+    text-transform: uppercase;
+    z-index: 50;
+    text-shadow: 5px 5px 5px #000, -5px -5px 5px #000, 5px 0px 5px #000, 0px 5px 5px #000,-5px 0px 5px #000,0px -5px 5px #000;
+}
+
+section.modulo.parallax::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8;
+    position: absolute;
+    background: linear-gradient( to bottom, #000000b4 1%, rgba(0 , 0, 0, 0) 90%, #000000 100% );
+}
+
+section.modulo.parallax-1{
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/24/01/15/coffee-819362_640.jpg);
+}
+
+section.modulo.parallax-2{
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/12/54/cafe-1869656_640.jpg);
+}
+section.modulo.parallax-3{
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/30/14/08/cafe-1872888_640.jpg);
+}
+
+footer{
+    padding: 10%;
+    text-align: center;
+}
+
+@keyframes surgir {
+    from{
+        opacity: 0;
+        translate: -100vw 0;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@media all and (max-width: 820px) {
+
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        
+    }
+    section.modulo h2{
+        margin-bottom: 30px;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align:  center;
+        transform: translatex(-4%);
+        margin: 3%;
+
+    }
+    section.modulo p{
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1em;
+        transform: translatex(-4%);
+        margin: 3%;
+
+    }
+    section.modulo.parallax h1{
+
+        color: #b8b8b8;
+        text-align: center;
+        font-size: 40px;
+        text-transform: uppercase;
+        z-index: 50;
+        text-shadow: 5px 5px 5px #000, -5px -5px 5px #000, 5px 0px 5px #000, 0px 5px 5px #000,-5px 0px 5px #000,0px -5px 5px #000;
+    }
+}
