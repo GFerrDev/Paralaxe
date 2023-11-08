@@ -33,7 +33,7 @@ main{
     padding: 0 15px;
     animation: surgir 1s;
     animation-timeline: view();
-    animation-range: cover 10% cover 70%;
+    animation-range: cover 0 cover 30%;
 }
 
 section.modulo p{
